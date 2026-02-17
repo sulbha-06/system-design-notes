@@ -1,15 +1,13 @@
 import React from "react";
+import { LANG } from "../../utils/langConstants";
 
-function AboutPage() {
+function AboutPage({ language }) {
+  console.log(language);
+  const data = LANG[language];
   return (
     <div>
-      <h1>About Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-        consectetur non nulla alias tenetur quae, eaque voluptas assumenda
-        recusandae, numquam officiis praesentium dolores eos omnis ad enim!
-        Reiciendis, quidem maiores?
-      </p>
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
     </div>
   );
 }
